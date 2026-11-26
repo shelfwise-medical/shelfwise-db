@@ -18,17 +18,17 @@ Back to the [README](../README.md) · [Sprint plan](../docs/sprint-plan.md)
 3. Install [uv](https://docs.astral.sh/uv/) if you don't have it (same tool as in our portfolios).
 4. **Your first commit:** tick the checkbox below in *this* file, commit it from your own account, push your branch and open a pull request. This proves your access works and starts your commit history.
    - [ ] I have read this file and the [sprint plan](../docs/sprint-plan.md), and I can push to the repo.
-5. From now on: one branch per task, a pull request for every change, and one approval from someone with a different role before merging.
+5. From now on: one branch per task and a pull request for every change. You can merge your own pull request once your work runs; Roberto reviews everyone's merged work every week before the Monday meeting.
 
 ## Sprint 1 tasks (due Monday 30 November)
 
-1. **Protect `main`:** Settings → Rules → Rulesets (or Branches) → require a pull request with **1 approval** before merging, and block force pushes. You need to be an organization owner for this; ask Roberto to make you one.
+1. **Protect `main` from accidents:** Settings → Rules → Rulesets → block force pushes and deletion of `main` (no approval required: we merge our own pull requests). You need to be an organization owner for this; ask Roberto to make you one.
 2. **Issues and a project board:** create a GitHub Project (board view: To do / In progress / Review / Done). Create one issue per Sprint 1 task in the [sprint plan](../docs/sprint-plan.md) and assign it to its owner.
 3. **Meeting notes:** create `docs/meetings/` with a template (date, who attended, what each person merged, decisions, blockers, next tasks), and write the notes of the 30 November meeting.
 4. **Decision record skeleton:** create `docs/decision-record.md` with the columns *Decision | Options | Choice | Evidence | Cost accepted*. First row: "SQLite local-first vs. cloud vs. PostgreSQL" (see the README).
 
 ## Definition of done for Sprint 1
 
-- `main` cannot be pushed to directly.
+- `main` cannot be force-pushed or deleted.
 - Every Sprint 1 task has an issue with an owner.
 - The 30 November meeting notes are merged.

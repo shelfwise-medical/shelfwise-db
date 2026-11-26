@@ -48,7 +48,8 @@ We will **measure concurrent writes** (sensors, clerks, pickers). If `database i
 ## How we work
 
 - **Everyone commits their own work** from their own GitHub account. The commit history is part of our evidence of who did what.
-- **No direct pushes to `main`.** Work on a branch (`<your-name>/<task>`, e.g. `roberto/generator`), open a pull request, and get **one approval** from someone with a different role.
+- **Work on a branch, merge with a pull request.** Use a branch per task (`<your-name>/<task>`, e.g. `roberto/generator`) and open a pull request; you can merge it yourself once your work runs. No approval is required.
+- **Weekly review:** Roberto reviews everyone's merged work every week before the Monday meeting and raises problems there or in the pull request.
 - **Small, clear commits** with messages that say what changed.
 - **Never commit databases, generated data or secrets** (`*.db`, `*.csv` outputs, `*.parquet`, `.env`). Commit only the scripts that build them; anyone must be able to rebuild everything from the repo.
 - **Every claim needs evidence:** a script, its output, a query plan or a measurement.
