@@ -20,13 +20,13 @@ Full story and cast: [docs/story.md](docs/story.md)
 
 > *"Which products have insufficient **safe available stock** to fulfil outstanding customer orders, and how much more is needed?"*
 >
-> **safe available stock** = on hand − allocated to other orders − quarantined − expired
+> **Working definition (under review in [Issue #12](https://github.com/shelfwise-medical/shelfwise-db/issues/12)):** determine eligible lot/location stock first, then subtract applicable active reservations without double-counting expired or quarantined units. The exact formula and worked example await the query/integrity owners.
 
 ## Architecture decision
 
 **Local-first.** The operational database is **SQLite** on a machine inside the warehouse, so receiving, picking and the cold-room sensors keep working when the internet is down. A cold chain must never depend on a network connection: if the database were in the cloud, an outage would stop the temperature readings and the quarantine trigger at the same time.
 
-A **nightly export** (Parquet, as in Module 6a) goes to off-site storage for reports and backups.
+A **nightly Parquet export** is **proposed** for historical reporting, if performance testing justifies it. A Parquet reporting snapshot is **not** a verified operational SQLite backup. A separate, consistent SQLite backup **and tested restore procedure** must be designed before recovery claims can be made. Neither export scheduling nor backup/restore has been demonstrated in this project yet.
 
 We will **measure concurrent writes** (sensors, clerks, pickers). If `database is locked` happens too often, that is our measured reason to move the operational database to PostgreSQL on-premises.
 
@@ -43,7 +43,7 @@ We will **measure concurrent writes** (sensors, clerks, pickers). If `database i
 | Benchmark (our measured decision) | Chanbopha Rin | [team/chanbopha.md](team/chanbopha.md) |
 | Interface & demo | Ian Okach | [team/ian.md](team/ian.md) |
 
-**Sprint plan:** [docs/sprint-plan.md](docs/sprint-plan.md)
+**Sprint plan:** [docs/sprint-plan.md](docs/sprint-plan.md) · **[Live Sprint Tracker](https://github.com/orgs/shelfwise-medical/projects/1)** · [Sprint 1 issues and evidence index](docs/coordination/sprint1-issue-plan.md)
 
 ## How we work
 
