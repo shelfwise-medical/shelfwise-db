@@ -69,7 +69,8 @@ Back to the [README](../README.md)
 
 ## Rules for every sprint
 
-- Work goes through a **branch and a pull request**, reviewed by someone with a different role.
+- Work goes through a **branch and a pull request**; you can merge your own pull request, no approval required.
+- **Weekly review:** Roberto reviews all merged work before each Monday meeting.
 - Each member's work is committed from **their own account**.
 - A task is **done** only when it is merged, it runs from a fresh clone, and its evidence (output, plan, timing) is committed.
 - If you are blocked, say so in the group chat **the same day**, not at the Monday meeting.
