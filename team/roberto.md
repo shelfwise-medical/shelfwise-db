@@ -17,7 +17,7 @@ Back to the [README](../README.md) · [Sprint plan](../docs/sprint-plan.md)
    ```
 3. **Your first commit:** tick the checkbox below in *this* file, commit it from your own account, push your branch and open a pull request.
    - [x] I have read this file and the [sprint plan](../docs/sprint-plan.md), and I can push to the repo.
-4. From now on: one branch per task, a pull request for every change, and one approval from someone with a different role before merging.
+4. From now on: one branch per task and a pull request for every change. You can merge your own pull request once your work runs; Roberto reviews everyone's merged work every week before the Monday meeting.
 
 ## Sprint 1 tasks (due Monday 30 November)
 
