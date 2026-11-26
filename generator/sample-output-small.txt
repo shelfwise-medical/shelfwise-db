@@ -1,0 +1,28 @@
+shelfwise.db built (small dataset, seed 42); today = 2026-03-16T08:00:00
+
+Rows per table:
+  product               20
+  supplier               3
+  location               4
+  batch                 50
+  stock_movement     1,000
+  sensor_reading       288
+  customer              10
+  customer_order        50
+  order_line           174
+  allocation             6
+
+Planted cases (see generator/README.md):
+  case 2, hidden shortage: product 7 (Paracetamol 500 mg tablets, pack of 5) is short by 50
+  case 1, shortage: product 2 (Insulin aspart 100 U/ml pen, pack of 5) is short by 58
+  case 1, shortage: product 8 (Ibuprofen 400 mg tablets, pack of 5) is short by 34
+  case 3, expired batches with stock left: 4
+  case 4, batches expiring within 30 days: 4
+  case 5, cold room 2 readings above 8.0 °C on 14 March: 47 (peak 14.0 °C)
+  case 6, Monday insulin order: order 50, 40 x Insulin glargine 100 U/ml pen, pack of 5; its only batch (1) is in cold room 2. Not short before the quarantine, short by 40 after it
+  case 7, replayed deliveries: 1 re-sent, 0 stored twice
+  case 8, replayed sensor readings: 1 re-sent, 1 absorbed
+  cold room 2 batches with stock on 14 March (must go into quarantine): 11
+
+Check: batch/location pairs with negative stock: 0
+Check: products short in SQL (before quarantine): [(2, 58), (7, 50), (8, 34)]; planted: [(2, 58), (7, 50), (8, 34)]; match: True
