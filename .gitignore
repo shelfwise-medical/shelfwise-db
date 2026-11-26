@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Databases and generated data: commit the scripts, never their output
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.duckdb
+*.parquet
+generator/output/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
