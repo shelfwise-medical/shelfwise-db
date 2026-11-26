@@ -17,7 +17,7 @@ Back to the [README](../README.md) · [Sprint plan](../docs/sprint-plan.md)
    ```
 3. Install [uv](https://docs.astral.sh/uv/) if you don't have it (same tool as in our portfolios).
 4. **Your first commit:** tick the checkbox below in *this* file, commit it from your own account, push your branch and open a pull request. This proves your access works and starts your commit history.
-   - [ ] I have read this file and the [sprint plan](../docs/sprint-plan.md), and I can push to the repo.
+   - [x] I have read this file and the [sprint plan](../docs/sprint-plan.md), and I can push to the repo.
 5. From now on: one branch per task, a pull request for every change, and one approval from someone with a different role before merging.
 
 ## Sprint 1 tasks (due Monday 30 November)
