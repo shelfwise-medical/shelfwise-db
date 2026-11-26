@@ -1,0 +1,9 @@
+[project]
+name = "shelfwise-db"
+version = "0.1.0"
+description = "ShelfWise Medical: inventory, cold chain and order fulfilment database (HSBI Databases final project)"
+requires-python = ">=3.14"
+dependencies = [
+    "datasette>=0.65.6",
+    "duckdb>=2.0.1",
+]
